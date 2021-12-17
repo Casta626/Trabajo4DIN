@@ -15,12 +15,22 @@ class Window(QWidget):
         self.anim_2 = QPropertyAnimation(self.child, b"size")
         self.anim_2.setEndValue(QSize(250, 150))
         self.anim_2.setDuration(2000)
+
+        self.anim_3 = QPropertyAnimation(self.child, b"pos")
+        self.anim_3.setEndValue(QSize(20, 20))
+        self.anim_3.setDuration(1000)
+        
+        self.anim_4 = QPropertyAnimation(self.child, b"size")
+        self.anim_4.setEndValue(QSize(400, 150))
+        self.anim_4.setDuration(1000)
         # Grupo de animación secuencial
         self.anim_group = QSequentialAnimationGroup()
         # Grupo de animación paralela
         # self.anim_group = QParallelAnimationGroup()
         self.anim_group.addAnimation(self.anim)
         self.anim_group.addAnimation(self.anim_2)
+        self.anim_group.addAnimation(self.anim_3)
+        self.anim_group.addAnimation(self.anim_4)
         self.anim_group.start()
 
 app = QApplication(sys.argv)

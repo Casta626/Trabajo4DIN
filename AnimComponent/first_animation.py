@@ -11,7 +11,7 @@ class Window(QWidget):
         # Le ponemos un estilo con un color para que se vea
         self.child.setStyleSheet("background-color:red;border-radius:15px;")
         # Le ponemos un tamaño de 100x100
-        self.child.resize(100, 100)
+        self.child.resize(100, 60)
         # Creamos una QPropertyAnimation(elemento, propiedad)
         self.anim = QPropertyAnimation(self.child, b"pos")
         # Establecemos una coordenada final
